@@ -1,0 +1,22 @@
+vitoria = int(input("Quantidade de vitórias: "))
+derrota = int(input("Quantidade de derrotas: "))
+
+def saldo_rankeadas(vitoria, derrota):
+    saldo = vitoria - derrota
+    
+    if saldo <= 10:
+        return f"O herói tem saldo de {saldo} e está no nível de Ferro."
+    elif 11 <= saldo <= 20:
+        return f"O herói tem saldo de {saldo} e está no nível de Bronze"
+    elif 21 <= saldo <= 50:
+        return f"O herói tem saldo de {saldo} e está no nível de Prata"
+    elif 51 <= saldo <= 80:
+        return f"O herói tem saldo de {saldo} e está no nível de Ouro"
+    elif 81 <= saldo <= 90:
+        return f"O herói tem saldo de {saldo} e está no nível de Diamante"
+    elif 91 <= saldo <= 100:
+        return f"O herói tem saldo de {saldo} e está no nível de Lendário"
+    else:
+        return f"O herói tem saldo de {saldo} e está no nível de Imortal."
+
+print(saldo_rankeadas(vitoria, derrota))
